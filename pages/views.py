@@ -7,3 +7,8 @@ class HomeView(TemplateView):
 
 class ServicesWebDevelopmentView(TemplateView):
     template_name = "pages/services_web_development.html"
+
+
+class ServicesSeoView(TemplateView):
+    template_name = "pages/services_seo.html"
+    
