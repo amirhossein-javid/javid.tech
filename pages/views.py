@@ -15,4 +15,3 @@ class ServicesSeoView(TemplateView):
 
 class AboutView(TemplateView):
     template_name = "pages/about.html"
-    
