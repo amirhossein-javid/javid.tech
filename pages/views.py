@@ -1,4 +1,7 @@
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, CreateView
+from django.urls import reverse_lazy
+
+from .forms import ContactMessageForm
 
 
 class HomeView(TemplateView):
@@ -15,3 +18,9 @@ class ServicesSeoView(TemplateView):
 
 class AboutView(TemplateView):
     template_name = "pages/about.html"
+
+
+class ContactView(CreateView):
+    template_name = "pages/contact.html"
+    form_class = ContactMessageForm
+    success_url = reverse_lazy('contact')
