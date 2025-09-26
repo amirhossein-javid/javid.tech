@@ -11,4 +11,8 @@ class ServicesWebDevelopmentView(TemplateView):
 
 class ServicesSeoView(TemplateView):
     template_name = "pages/services_seo.html"
+
+
+class AboutView(TemplateView):
+    template_name = "pages/about.html"
     
