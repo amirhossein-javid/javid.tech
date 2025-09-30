@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block description %}
+برای ارتباط با تیم ما و درخواست پشتیبانی، فرم تماس را پر کنید یا از طریق ایمیل و تلفن با ما تماس بگیرید. ما در سریع‌ترین زمان ممکن به شما پاسخ خواهیم داد.
+{% endblock %}
+
+{% block title %}تماس با ما | ارتباط با تیم ما برای همکاری و پشتیبانی{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="mb-4 fw-bold">با ما در تماس باشید</h1>
+    <p>
+        اگر سوالی دارید یا به مشاوره و خدمات نیاز دارید، می‌توانید از روش‌های زیر با من ارتباط برقرار کنید. تیم ما
+        آماده است تا پاسخگوی نیازها و درخواست‌های شما باشد.
+    </p>
+    <p>راه‌های ارتباطی:</p>
+    <ul>
+        <li><a href="mailto:amirhosseinjavid.dev@gmail.com" class="text-decoration-none">ایمیل</a></li>
+        <li><a href="https://t.me/amirhoseinjavid" target="_blank" class="text-decoration-none">تلگرام</a></li>
+        <li><a href="https://github.com/amirhossein-javid" target="_blank" class="text-decoration-none">گیت هاب</a></li>
+    </ul>
+    <p>
+        برای راحتی بیشتر، می‌توانید فرم زیر را پر کنید تا به طور مستقیم با ما در ارتباط باشید. تیم پشتیبانی ما در
+        سریع‌ترین زمان ممکن به درخواست شما پاسخ خواهد داد.
+    </p>
+    <div class="row align-items-center">
+        <div class="col-md-5">
+            <form method="post">
+                {% csrf_token %}
+                {% for field in form %}
+                <div class="mb-3">
+                    {{ field.label_tag }}
+                    {{ field }}
+                    {% if field.errors %}
+                    <div class="text-danger">{{ field.errors }}</div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+                <button type="submit" class="btn btn-primary">ارسال</button>
+            </form>
+        </div>
+        <div class="col-md-5 offset-md-2">
+            <img class="img-fluid" loading="lazy" src="{% static 'images/network-4.png' %}"
+                alt="تماس با پشتیبانی سایت و سئو">
+        </div>
+    </div>
+</div>
+{% endblock %}

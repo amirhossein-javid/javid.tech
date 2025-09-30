@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block description %}
+طراحی و توسعه سایت‌های حرفه‌ای برای کسب و کار شما با امنیت و سرعت بالا و بهینه شده برای سئو. طراحی سایت شرکتی، فروشگاهی، شخصی، خدماتی و غیره مطابق نیاز شما.
+{% endblock %}
+
+
+{% block title %}طراحی و توسعه سایت‌های حرفه‌ای | امن، سریع و بهینه برای سئو{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <h1 class="mb-4 fw-bold">طراحی و توسعه سایت</h1>
+            <p>
+                داشتن یک وب‌سایت حرفه‌ای برای جذب مشتریان و رقابت ضروری است. یک سایت خوب باید تجربه
+                کاربری
+                عالی، سرعت و امنیت بالا و را فراهم کند و برای سئو بهینه سازی شده باشد. خدمات ما شامل طراحی وب‌سایت‌های
+                ریسپانسیو، سریع و امن است تا سایت شما از نظر فنی در بالاترین سطح قرار گیرد.
+            </p>
+            <ul class="fw-bold">
+                <li>سایت‌های شرکتی</li>
+                <li>سایت‌های فروشگاهی (E-commerce)</li>
+                <li>سایت‌های شخصی و رزومه</li>
+                <li>سایت‌های خبری و مجله‌ای</li>
+                <li>سایت‌های بلاگ</li>
+                <li>سایت‌های آموزشی و فروش دوره</li>
+                <li>سایت‌های خدماتی</li>
+            </ul>
+            <a href="{% url 'contact' %}" class="btn btn-outline-primary">درخواست انجام پروژه طراحی سایت</a>
+            <a href="{% url 'services-seo' %}" class="btn btn-outline-primary">خدمات سئو</a>
+        </div>
+        <div class="col-md-6">
+            <img class="img-fluid" loading="lazy" src="{% static 'images/coding-5-61.png' %}" alt="خدمات طراحی و توسعه سایت">
+        </div>
+    </div>
+</div>
+{% endblock %}
