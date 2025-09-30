@@ -16,6 +16,10 @@ class ServicesSeoView(TemplateView):
     template_name = "pages/services_seo.html"
 
 
+class PortfolioView(TemplateView):
+    template_name = "pages/portfolio.html"
+
+
 class AboutView(TemplateView):
     template_name = "pages/about.html"
 
